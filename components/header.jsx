@@ -7,6 +7,7 @@ import {
   GraduationCap,
   ChevronDown,
   StarsIcon,
+  TrendingUp,
 } from "lucide-react";
 import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
@@ -27,7 +28,7 @@ export default async function Header() {
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/">
           <Image
-            src={"/logo.png"}
+            src={"/logo1.jpeg"}
             alt="Sensai Logo"
             width={200}
             height={60}
@@ -38,7 +39,19 @@ export default async function Header() {
         {/* Action Buttons */}
         <div className="flex items-center space-x-2 md:space-x-4">
           <SignedIn>
-            <Link href="/dashboard">
+            <Link href="/skillgap">
+                          <Button
+                            variant="outline"
+                            className="hidden md:inline-flex items-center gap-2"
+                          >
+                            <TrendingUp className="h-4 w-4" />
+                            Skill Gap Analysis
+                          </Button>
+                          <Button variant="ghost" className="md:hidden w-10 h-10 p-0">
+                            <TrendingUp className="h-4 w-4" />
+                          </Button>
+            </Link>
+            {/* <Link href="/dashboard">
               <Button
                 variant="outline"
                 className="hidden md:inline-flex items-center gap-2"
@@ -49,14 +62,14 @@ export default async function Header() {
               <Button variant="ghost" className="md:hidden w-10 h-10 p-0">
                 <LayoutDashboard className="h-4 w-4" />
               </Button>
-            </Link>
+            </Link> */}
 
             {/* Growth Tools Dropdown */}
-            <DropdownMenu>
+            {/* <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button className="flex items-center gap-2">
                   <StarsIcon className="h-4 w-4" />
-                  <span className="hidden md:block">Growth Tools</span>
+                  <span className="hidden md:block">Mains</span>
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
@@ -83,7 +96,7 @@ export default async function Header() {
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
-            </DropdownMenu>
+            </DropdownMenu> */}
           </SignedIn>
 
           <SignedOut>

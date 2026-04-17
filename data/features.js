@@ -1,27 +1,46 @@
-import { BrainCircuit, Briefcase, LineChart, ScrollText } from "lucide-react";
+import { Brain, Briefcase, BarChart3, FileText } from "lucide-react";
 
 export const features = [
   {
-    icon: <BrainCircuit className="w-10 h-10 mb-4 text-primary" />,
-    title: "AI-Powered Career Guidance",
-    description:
-      "Get personalized career advice and insights powered by advanced AI technology.",
+    title: "AI Career Guidance",
+    description: "Personalized career paths using AI insights.",
+    icon: <Brain className="h-6 w-6" />,
+    image: "/ai_career.jpeg",
+    href: "/ai-career-guidance"
   },
   {
-    icon: <Briefcase className="w-10 h-10 mb-4 text-primary" />,
-    title: "Interview Preparation",
-    description:
-      "Practice with role-specific questions and get instant feedback to improve your performance.",
+    title: "Knowledge Check",
+    description: "Practice Questions with AI feedback.",
+    icon: <Briefcase className="h-6 w-6" />,
+    image: "/interview.jpeg",
+    href: "/interview"
   },
   {
-    icon: <LineChart className="w-10 h-10 mb-4 text-primary" />,
-    title: "Industry Insights",
-    description:
-      "Stay ahead with real-time industry trends, salary data, and market analysis.",
+    title: "Market Trends",
+    description: "Track salary trends and market demand.",
+    icon: <BarChart3 className="h-6 w-6" />,
+    image: "/industry.jpeg",
+     href: "/dashboard"
   },
   {
-    icon: <ScrollText className="w-10 h-10 mb-4 text-primary" />,
     title: "Smart Resume Creation",
-    description: "Generate ATS-optimized resumes with AI assistance.",
+    description: "AI-powered resume optimization.",
+    icon: <FileText className="h-6 w-6" />,
+    image: "/resume.jpeg",
+     href: "/resume"
   },
+  {
+    title: "Cover Letter Builder",
+    description: "AI-powered Cover Letter Creation.",
+    icon: <FileText className="h-6 w-6" />,
+    image: "/cover-letter.jpeg",
+     href: "/ai-cover-letter"
+  },
+  {
+    title: "Skill Gap Analysis",
+    description: "Identify and address skill gaps using AI insights.",
+    icon: <FileText className="h-6 w-6" />,
+    image: "/skill-gap.jpeg",
+     href: "/skillgap"
+  }
 ];

@@ -22,4 +22,9 @@ export const howItWorks = [
     description: "Monitor improvements with detailed performance analytics",
     icon: <LineChart className="w-8 h-8 text-primary" />,
   },
+  {
+  title: "Identify Skill Gaps",
+  description: "Analyze your current skills and discover areas that need improvement",
+  icon: <LineChart className="w-8 h-8 text-primary" />,
+ }
 ];
