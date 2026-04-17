@@ -1,5 +1,6 @@
 generator client {
   provider = "prisma-client-js"
+  binaryTargets = ["windows"]
 }
 
 datasource db {
@@ -15,12 +16,21 @@ model User {
   imageUrl      String?
   industry      String?    // Combined industry-subindustry (e.g., "tech-software-development")
   industryInsight IndustryInsight? @relation(fields: [industry], references: [industry])
+
+  state         String?
+  city          String?
+  role          String?
+  experience    Int?
+  targetRole    String?
+  targetLevel   String?
+
+  isOnboarded   Boolean  @default(false)   // ✅ ADD THIS
+
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
 
   // Profile fields
   bio           String?
-  experience    Int?      // Years of experience
   
   // Relations
   skills        String[]  // Array of skills
